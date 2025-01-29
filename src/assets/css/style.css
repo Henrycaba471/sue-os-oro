@@ -276,7 +276,8 @@ p {
 
     .data-sorteo-chance,
     .data-sorteo-loteria,
-    .data-sorteo-4c {
+    .data-sorteo-4c,
+    .data-sorteo-3c {
         width: 100%;
         border-radius: 0;
     }
