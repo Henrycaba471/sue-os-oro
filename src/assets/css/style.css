@@ -96,10 +96,24 @@ body{
 
 /**Main*/
 .content-main {
-    padding: 3rem;
     display: grid;
     grid-template-rows: 1fr;
     justify-items: center;
+    padding-bottom: 3rem;
+}
+.content-main .header-main{
+    width: 100%;
+    text-align: center;
+    color: rgb(2, 122, 2);
+    background-color: #e3e9e9b2;;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+.content-main .header-main article{
+    width: 80%;
+    font-size: 1.7rem;
+    font-family: Roboto;
+    margin: 0 auto;
 }
 
 .content-main .sorteos {
