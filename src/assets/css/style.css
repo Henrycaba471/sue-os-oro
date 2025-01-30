@@ -19,7 +19,12 @@ h5,
 h6 {
     margin: 0;
 }
-
+body{
+    background-image: url(../imgs/img/peakp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 /**Header*/
 .header {
     display: flex;
@@ -95,10 +100,6 @@ h6 {
     display: grid;
     grid-template-rows: 1fr;
     justify-items: center;
-    background-image: url(../imgs/img/peakp.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 .content-main .sorteos {
@@ -109,6 +110,7 @@ h6 {
     width: 80%;
     background-color: #e3e9e9b2;
     margin-top: .3rem;
+    font-family: Roboto, sans-serif;
 }
 
 .content-main .sorteos:hover {
@@ -119,41 +121,81 @@ h6 {
 
 .content-main .chances {
     background-image: url(../imgs/icons/icon.png);
-    background-size: 60px;
+    background-size: 6rem;
     background-repeat: no-repeat;
     background-position: right center;
-    border-radius: 15px;
+    border-radius: 1.5rem;
 }
 
 .content-main .loteria {
     background-image: url(../imgs/icons/suertes.png);
-    background-size: 65px;
+    background-size: 6.5rem;
     background-repeat: no-repeat;
     background-position: right;
-    border-radius: 15px;
+    border-radius: 1.5rem;
 }
 
 .content-main .cuatro-cifras {
     background-image: url(../imgs/icons/monedas.png);
-    background-size: 65px;
+    background-size: 6.5rem;
     background-repeat: no-repeat;
     background-position: right;
-    border-radius: 15px;
+    border-radius: 1.5rem;
 }
 
 .content-main .tres-cifras {
     background-image: url(../imgs/icons/hoya.png);
-    background-size: 65px;
+    background-size: 6.5rem;
     background-repeat: no-repeat;
     background-position: right;
-    border-radius: 15px;
+    border-radius: 1.5rem;
+}
+.content-main .astro-dos {
+    background-image: url(../imgs/icons/symbol.png);
+    background-size: 6.5rem;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 1.5rem;
+}
+.content-main .miloto {
+    background-image: url(../imgs/icons/milo.png);
+    background-size: 6.5rem;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 1.5rem;
+}
+.content-main .baloto {
+    background-image: url(../imgs/icons/baloto.png);
+    background-size: 6.5rem;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 1.5rem;
+}
+.content-main .tripletazo {
+    background-image: url(../imgs/icons/triple.png);
+    background-size: 6.5rem;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 1.5rem;
+}
+.content-main .schance {
+    background-image: url(../imgs/icons/schance.png);
+    background-size: 6.5rem;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 1.5rem;
 }
 
 /**Data sorteo*/
 .data-sorteo-chance,
 .data-sorteo-loteria,
 .data-sorteo-4c,
-.data-sorteo-3c {
+.data-sorteo-3c,
+.data-sorteo-astro,
+.data-sorteo-miloto,
+.data-sorteo-baloto,
+.data-sorteo-tripletazo,
+.data-sorteo-schance {
     font-size: 2rem;
     padding: 0 1rem;
     text-align: center;
@@ -175,7 +217,12 @@ p {
 .data-sorteo-chance img,
 .data-sorteo-loteria img,
 .data-sorteo-4c img,
-.data-sorteo-3c img {
+.data-sorteo-3c img,
+.data-sorteo-astro img,
+.data-sorteo-miloto img,
+.data-sorteo-baloto img,
+.data-sorteo-tripletazo img,
+.data-sorteo-schance img {
     border-radius: 50%;
     margin: 1rem 0;
     background-color: rgba(255, 255, 255, 0.904);
@@ -186,7 +233,12 @@ p {
 .data-sorteo-chance img:hover,
 .data-sorteo-loteria img:hover,
 .data-sorteo-4c img:hover,
-.data-sorteo-3c img:hover {
+.data-sorteo-3c img:hover,
+.data-sorteo-astro img:hover,
+.data-sorteo-miloto img:hover,
+.data-sorteo-baloto img:hover,
+.data-sorteo-tripletazo img:hover,
+.data-sorteo-schance img:hover {
     cursor: pointer;
     transform: rotate(180deg);
     border: 2px solid rgba(255, 255, 255);
@@ -200,6 +252,29 @@ p {
 .see-borders {
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
+}
+
+.signo-astro{
+    font-size: 2.5rem;
+    font-family: lobster;
+    text-transform: capitalize;
+    padding: .3rem;
+    border-radius: .5rem;
+    color: #000;
+}
+.signo-astro .border-signo{
+    padding: .6rem;
+    border-radius: .2rem 1rem;
+}
+.signo-astro .border-signo .signo-luck{
+    background: #fff;
+    border-radius: .2rem 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.number-milo{
+    font-size: 1.4rem !important;
 }
 
 .number-play {
@@ -269,7 +344,12 @@ p {
     .content-main .chances,
     .content-main .loteria,
     .content-main .cuatro-cifras,
-    .content-main .tres-cifras {
+    .content-main .tres-cifras,
+    .content-main .astro-dos,
+    .content-main .miloto,
+    .content-main .baloto,
+    .content-main .tripletazo,
+    .content-main .schance {
         border: none;
         border-radius: 0;
     }
@@ -277,7 +357,12 @@ p {
     .data-sorteo-chance,
     .data-sorteo-loteria,
     .data-sorteo-4c,
-    .data-sorteo-3c {
+    .data-sorteo-3c,
+    .data-sorteo-astro,
+    .data-sorteo-miloto,
+    .data-sorteo-baloto,
+    .data-sorteo-tripletazo,
+    .data-sorteo-schance {
         width: 100%;
         border-radius: 0;
     }
@@ -320,5 +405,79 @@ p {
         font-size: 1.7rem;
         color: #000;
         font-weight: 900;
+    }
+}
+
+/**Footer*/
+.footer {
+    background-color: #3f3e3ef6;
+    color: rgb(255, 255, 0);
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    font-family: lobster, sans-serif;
+    border-bottom: 0.2rem solid #ffffff59;
+}
+
+.footer .footer-footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 1.7rem;
+    padding: 2rem 0;
+}
+.footer-footer .designer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.designer > img{
+    display: block;
+    border-radius: 50%;
+    margin: .7rem 0;
+}
+.designer h4{
+    text-align: center;
+    width: 100%;
+    letter-spacing: .2rem;
+}
+.designer p{
+    margin: 0;
+    font-family: lobster, sans-serif;
+    text-align: center;
+}
+.designer-social-media{
+    width: 100%;
+    text-align: center;
+}
+.designer-social-media img{
+    margin: 1rem;
+}
+.copyright{
+    align-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .footer .footer-footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        font-family: Roboto, sans-serif;
+    }
+    .copyright{
+        padding: 2rem;
+    }
+    .nav-footer ul li a{
+        font-size: 1.5rem;
     }
 }
