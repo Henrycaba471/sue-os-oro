@@ -67,50 +67,33 @@
             </article>
             <article class="cruceta-fn">
                 <div class="header-cruceta">
-                    <h3>Genera tu número a partir de tu fecha de nacimiento</h3>
-                    <label for="nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" name="nacimiento" id="nacimiento">
+                    <h3>Genera tu número a partir de tu fecha y hora de nacimiento</h3>
+                    <div>
+                        <label for="nacimiento-mes">Fecha de nacimiento:</label>
+                        <input type="date" name="nacimiento-mes" id="nacimiento-mes">
+                        <div class="hora">
+                            <label for="hora">Hora:</label>
+                            <input type="number" name="hora" id="hora" max="12" min="1">
+                            <label for="hora">Minuto:</label>
+                            <input type="number" name="minuto" id="minuto" max="59" min="0">
+                        </div>
+                    </div>
+                    <button type="button" id="ver-numeros-hf">Ver número</button>
                 </div>
-                <div class="cruceta-fisica">
+                <div class="fecha-hora">
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li></li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
-                        <li>9</li>
+                        <li class="position-r1fh">1992 → 1 + 9 + 9 + 2 → 21 → 1 + 2 → 3</li>
+                        <li class="position-r2fh">08 → 0 + 8 → 8</li>
+                        <li class="position-r3fh">20 → 0 + 2 → 2</li>
+                        <li class="position-r4fh">3:10 → 3 + 1 + 0 → 4</li>
                     </ul>
                 </div>
-                <div class="numbers">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-            </article>
-            <article class="cruceta-fn">
-                <div class="header-cruceta">
-                    <h3>Genera tu número a partir de tu fecha de nacimiento</h3>
-                    <input type="date" name="nacimiento" id="nacimiento">
-                </div>
-                <div class="cruceta-fisica">
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li></li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
-                        <li>9</li>
-                    </ul>
+                <div class="numbers-h-f">
+                    <h1>Tú número es:</h1>
+                    <img width="80" class="img-1">
+                    <img width="80" class="img-2">
+                    <img width="80" class="img-3">
+                    <img width="80" class="img-4">
                 </div>
             </article>
         </section>

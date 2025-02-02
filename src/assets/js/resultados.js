@@ -18,7 +18,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 return 0; // son iguales
             });
 
-            data.data.forEach((item) => {
+            const datosLimpios = [...new Map(data.data.map(sorteo => [sorteo.slug, sorteo])).values()];
+
+            const modificarSerie = (serie) => {
+                switch (serie) {
+                    case "ARI":
+                        return "ARIES";
+                    case "TAU":
+                        return "TAURO";
+                    case "GEM":
+                        return "GEMINIS"
+                    case "CAN":
+                        return "CANCER";
+                    case "LEO":
+                        return "LEO";
+                    case "VIR":
+                        return "VIRGO"
+                    case "LIB":
+                        return "LIBRA";
+                    case "ESC":
+                        return "ESCORPIÓN";
+                    case "SAG":
+                        return "SAGITARIO"
+                    case "CAP":
+                        return "CAPRICORNIO";
+                    case "ACU":
+                        return "ACUARIO";
+                    case "PIS":
+                        return "PISCIS"
+                    default:
+                        return serie; // Si no hay coincidencia, devuelve la serie original
+                }
+            };
+            const datosModificados = datosLimpios.map(sorteo => {
+                if (sorteo.lottery === "ASTRO SOL" || sorteo.lottery === "ASTRO LUNA") {
+                    return {
+                        ...sorteo, // Copia todas las propiedades del sorteo
+                        series: modificarSerie(sorteo.series) // Modifica la propiedad "series"
+                    };
+                }
+                return sorteo; // Devuelve el sorteo sin modificar si no es "ASTRO SOL" o "ASTRO LUNA"
+            });
+
+            datosModificados.forEach((item) => {
                 let contenido = `
                     <section class="resultado-loteria">
                         <div class="loteria-name"><h3>${item.lottery}</h3></div>
@@ -72,7 +114,51 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (a.lottery > b.lottery) return 1;  // b viene antes que a
                     return 0; // son iguales
                 });
-                data.data.forEach((item) => {
+
+                //Eliminar repetidos
+                const datosLimpios = [...new Map(data.data.map(sorteo => [sorteo.slug, sorteo])).values()];
+
+                const modificarSerie = (serie) => {
+                    switch (serie) {
+                        case "ARI":
+                            return "ARIES";
+                        case "TAU":
+                            return "TAURO";
+                        case "GEM":
+                            return "GEMINIS"
+                        case "CAN":
+                            return "CANCER";
+                        case "LEO":
+                            return "LEO";
+                        case "VIR":
+                            return "VIRGO"
+                        case "LIB":
+                            return "LIBRA";
+                        case "ESC":
+                            return "ESCORPIÓN";
+                        case "SAG":
+                            return "SAGITARIO"
+                        case "CAP":
+                            return "CAPRICORNIO";
+                        case "ACU":
+                            return "ACUARIO";
+                        case "PIS":
+                            return "PISCIS"
+                        default:
+                            return serie; // Si no hay coincidencia, devuelve la serie original
+                    }
+                };
+                const datosModificados = datosLimpios.map(sorteo => {
+                    if (sorteo.lottery === "ASTRO SOL" || sorteo.lottery === "ASTRO LUNA") {
+                        return {
+                            ...sorteo, // Copia todas las propiedades del sorteo
+                            series: modificarSerie(sorteo.series) // Modifica la propiedad "series"
+                        };
+                    }
+                    return sorteo; // Devuelve el sorteo sin modificar si no es "ASTRO SOL" o "ASTRO LUNA"
+                });
+
+                datosModificados.forEach((item) => {
                     let contenido = `
                         <section class="resultado-loteria">
                             <div class="loteria-name"><h3>${item.lottery}</h3></div>

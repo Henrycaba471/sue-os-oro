@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', (e) => {
     console.log('Formulas running');
     document.addEventListener('click', (e) => {
+
         if (e.target.matches('#ver-numeros-nacimiento')) {
 
             const fechaUser = document.getElementById('nacimiento');
@@ -68,6 +69,68 @@ document.addEventListener('DOMContentLoaded', (e) => {
                                                                 <li>${numeroSistema[3]}</li>
                                                                 <li>${numeroSistema[4]}</li>
                                                             </ul>`
+        }
+
+        if (e.target.matches('#ver-numeros-hf')) {
+
+            const fNConHora = document.getElementById('nacimiento-mes');
+            let horaN = document.getElementById('hora').value;
+            let minutoN = document.getElementById('minuto').value;
+            const pR1 = document.querySelector('.position-r1fh');
+            const pR2 = document.querySelector('.position-r2fh');
+            const pR3 = document.querySelector('.position-r3fh');
+            const pR4 = document.querySelector('.position-r4fh');
+
+            const img1 = document.querySelector('.img-1');
+            const img2 = document.querySelector('.img-2');
+            const img3 = document.querySelector('.img-3');
+            const img4 = document.querySelector('.img-4');
+
+            if (!fNConHora.value || !horaN || !minutoN) {
+                return alert('Debes ingresar todos los datos')
+            }
+            if (parseInt(horaN) > 12 || parseInt(minutoN) > 59) {
+                return alert('La hora o los minutos ingresados no son validos');
+            }
+
+            let [anio, mes, dia] = fNConHora.value.split('-');
+
+            function reducirASoloDigito(numero) {
+                while (numero > 9) {
+                    numero = numero
+                        .toString()
+                        .split('')
+                        .map(Number)
+                        .reduce((total, num) => total + num, 0);
+                }
+                return numero;
+            }
+
+            let sumaAnio = anio.split('').map(Number).reduce((total, num) => total + num, 0);
+            let sumaMes = mes.split('').map(Number).reduce((total, num) => total + num, 0);
+            let sumaDia = dia.split('').map(Number).reduce((total, num) => total + num, 0);
+            let horaMin = [horaN, minutoN];
+            horaMin = horaMin.join('');
+
+            let sumaReducida = reducirASoloDigito(sumaAnio);
+
+            // Muestra el resultado en pR1.textContent
+            pR1.textContent = `${anio} → ${anio.split('').join(' + ')} → ${sumaAnio} → ${sumaAnio.toString().split('').join(' + ')} → ${sumaReducida}`;
+            pR2.textContent = `${mes} → ${mes.split('').join(' + ')} → ${sumaMes}`;
+            pR3.textContent = `${dia} → ${dia.split('').join(' + ')} → ${sumaDia} → ${reducirASoloDigito(sumaDia)}`;
+            pR4.textContent = `${horaN}:${minutoN} → ${horaMin.split('').join(' + ')} → ${reducirASoloDigito(horaMin)}`
+
+            //Mostrar numero
+            let pIm1 = reducirASoloDigito(sumaAnio);
+            let pIm2 = reducirASoloDigito(sumaMes);
+            let pIm3 = reducirASoloDigito(sumaDia);
+            let pIm4 = reducirASoloDigito(horaMin);
+
+            img1.setAttribute('src', `assets/imgs/img/${pIm1}.png`);
+            img2.setAttribute('src', `assets/imgs/img/${pIm2}.png`);
+            img3.setAttribute('src', `assets/imgs/img/${pIm3}.png`);
+            img4.setAttribute('src', `assets/imgs/img/${pIm4}.png`);
+
         }
     });
 });

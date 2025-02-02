@@ -103,12 +103,11 @@ body{
 .content-main .formulas{
     display: flex;
     justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
     color: rgba(0, 0, 0, 0.705);
     padding: 2rem 0;
-
+    flex-grow: 1;
 }
 .content-main .formulas .cruceta-fn{
     width: 45rem;
@@ -224,7 +223,47 @@ body{
     text-align: center;
     font-family: lobster, sans-serif;
 }
-
+.content-main .cruceta-fn .fecha-hora{
+    margin-top: 1rem;
+    background-image: url(../imgs/img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+}
+.content-main .cruceta-fn .fecha-hora ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    font-size: 2.3rem;
+    list-style: none;
+    font-family: lobster;
+    margin: 0;
+    padding: 1rem 0;
+    align-items: center;
+}
+.content-main .cruceta-fn .fecha-hora ul li{
+    background-color: #ffffffa1;
+    padding: 0 1rem;
+}
+.content-main .cruceta-fn .numbers-h-f{
+    text-align: center;
+    font-family: lobster, sans-serif;
+}
+.content-main .cruceta-fn div label{
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+}
+.content-main .cruceta-fn div input[type="number"]{
+    border: none;
+    outline: none;
+    padding: 0 .5rem;
+}
+.content-main .cruceta-fn .numbers-h-f h1{
+    text-align: center;
+    font-family: lobster, sans-serif;
+    padding: 2rem 0;
+}
 @media screen and (max-width: 768px) {
     .content-main .formulas .cruceta-fn{
         border: none;
@@ -233,7 +272,7 @@ body{
 /**Footer*/
 .footer {
     background-color: #3f3e3ef6;
-    color: rgb(255, 255, 0);
+    color: #ffffff81;
     font-size: 2rem;
     display: flex;
     flex-direction: column;
@@ -249,7 +288,9 @@ body{
     font-family: lobster, sans-serif;
     border-bottom: 0.2rem solid #ffffff59;
 }
-
+.header-footer h1{
+    color: rgb(255, 255, 0);
+}
 .footer .footer-footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
