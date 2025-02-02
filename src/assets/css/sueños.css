@@ -223,6 +223,9 @@ body{
     text-align: center;
     font-family: lobster, sans-serif;
 }
+.content-main .cruceta-fn{
+    background-color: #33333346;
+}
 .content-main .cruceta-fn .fecha-hora{
     margin-top: 1rem;
     background-image: url(../imgs/img/bg.png);
@@ -249,6 +252,7 @@ body{
 .content-main .cruceta-fn .numbers-h-f{
     text-align: center;
     font-family: lobster, sans-serif;
+    padding-bottom: 3rem;
 }
 .content-main .cruceta-fn div label{
     font-family: Roboto, sans-serif;
