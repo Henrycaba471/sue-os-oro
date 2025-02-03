@@ -39,7 +39,9 @@ body{
     top: 0;
     z-index: 1000;
 }
-
+.header .header__title h1{
+    letter-spacing: .5rem;
+}
 .header .header-logo {
     display: flex;
     font-family: lobster, cursive;
@@ -252,7 +254,7 @@ body{
 .content-main .cruceta-fn .numbers-h-f{
     text-align: center;
     font-family: lobster, sans-serif;
-    padding-bottom: 3rem;
+    padding: 3rem;
 }
 .content-main .cruceta-fn div label{
     font-family: Roboto, sans-serif;
@@ -262,6 +264,11 @@ body{
     border: none;
     outline: none;
     padding: 0 .5rem;
+}
+.content-main .cruceta-fn .numbers-h-f .images{
+    border-radius: 1rem;
+    box-shadow: .3rem .3rem .3rem #191b1a85;
+    background: #7c7b7be1
 }
 .content-main .cruceta-fn .numbers-h-f h1{
     text-align: center;

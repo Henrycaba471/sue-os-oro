@@ -47,7 +47,7 @@ body{
     color: rgb(255, 255, 0);
 }
 .header .header__title h1{
-   letter-spacing: .3rem;
+    letter-spacing: .5rem;
 }
 .header .header-logo .header__logo {
     width: 7rem;
@@ -427,7 +427,7 @@ p {
 /**Footer*/
 .footer {
     background-color: #3f3e3ef6;
-    color: rgb(255, 255, 0);
+    color: #ffffff81;
     font-size: 2rem;
     display: flex;
     flex-direction: column;
@@ -443,7 +443,9 @@ p {
     font-family: lobster, sans-serif;
     border-bottom: 0.2rem solid #ffffff59;
 }
-
+.header-footer h1{
+    color: rgb(255, 255, 0);
+}
 .footer .footer-footer{
     display: grid;
     grid-template-columns: 1fr 1fr;

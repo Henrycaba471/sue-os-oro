@@ -39,7 +39,9 @@ body{
     top: 0;
     z-index: 1000;
 }
-
+.header .header__title h1{
+    letter-spacing: .5rem;
+}
 .header .header-logo {
     display: flex;
     font-family: lobster, cursive;
@@ -186,7 +188,7 @@ span{
 /**Footer*/
 .footer {
     background-color: #3f3e3ef6;
-    color: rgb(255, 255, 0);
+    color: #ffffff81;
     font-size: 2rem;
     display: flex;
     flex-direction: column;
@@ -202,7 +204,9 @@ span{
     font-family: lobster, sans-serif;
     border-bottom: 0.2rem solid #ffffff59;
 }
-
+.header-footer h1{
+    color: rgb(255, 255, 0);
+}
 .footer .footer-footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
