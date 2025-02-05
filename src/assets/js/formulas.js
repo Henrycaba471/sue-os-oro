@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 return r;
             });
 
-            console.log(numbersR);
+            //console.log(numbersR);
             document.querySelector('.position-r1').textContent = numbersR[0];
             document.querySelector('.position-r2').textContent = numbersR[2];
             document.querySelector('.position-r3').textContent = numbersR[1];
@@ -46,21 +46,21 @@ document.addEventListener('DOMContentLoaded', (e) => {
             function generarCombinacionAleatoria(arreglo) {
                 // Selecciona 4 números aleatorios del arreglo
                 const combinacion = [];
-                const copiaArreglo = [...arreglo]; // Copia el arreglo para no modificar el original
+                //const copiaArreglo = [...arreglo]; // Copia el arreglo para no modificar el original
 
                 for (let i = 0; i < 4; i++) {
-                    const indiceAleatorio = Math.floor(Math.random() * copiaArreglo.length);
-                    combinacion.push(copiaArreglo.splice(indiceAleatorio, 1)[0]);
+                    const indiceAleatorio = Math.floor(Math.random() * arreglo.length);
+                    combinacion.push(arreglo[indiceAleatorio]);
                 }
 
                 return combinacion.join('');
             }
 
             const numeroSistema = [];
-            for (let i = 0; i <= 5; i++) {
+            for (let i = 1; i <= 5; i++) {
                 numeroSistema.push(generarCombinacionAleatoria(numbersR));
             }
-            console.log(numeroSistema);
+            //console.log(numeroSistema);
             document.querySelector('.numbers').innerHTML = `<h3>Tus números para ganar son:</h3>
                                                             <ul>
                                                                 <li>${numeroSistema[0]}</li>
