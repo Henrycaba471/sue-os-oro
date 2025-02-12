@@ -63,11 +63,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
             //console.log(numeroSistema);
             document.querySelector('.numbers').innerHTML = `<h3>Tus números para ganar son:</h3>
                                                             <ul>
-                                                                <li>${numeroSistema[0]}</li>
-                                                                <li>${numeroSistema[1]}</li>
-                                                                <li>${numeroSistema[2]}</li>
-                                                                <li>${numeroSistema[3]}</li>
-                                                                <li>${numeroSistema[4]}</li>
+                                                                <li>${numeroSistema[0].slice(-2) + numeroSistema[0].slice(0, -2)}</li>
+                                                                <li>${numeroSistema[1].slice(-2) + numeroSistema[1].slice(0, -2)}</li>
+                                                                <li>${numeroSistema[2].slice(-2) + numeroSistema[2].slice(0, -2)}</li>
+                                                                <li>${numeroSistema[3].slice(-2) + numeroSistema[3].slice(0, -2)}</li>
+                                                                <li>${numeroSistema[4].slice(-2) + numeroSistema[4].slice(0, -2)}</li>
                                                             </ul>`
         }
 
